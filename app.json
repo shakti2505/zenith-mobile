@@ -11,8 +11,7 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSCameraUsageDescription": "Industrial Copilot requires access to the camera to stream live video and capture high-res frame snapshots.",
-        "NSMicrophoneUsageDescription": "Industrial Copilot requires access to the microphone for real-time AI voice interaction."
+        "NSCameraUsageDescription": "Industrial Copilot requires access to the camera to capture inspection frames for AI vision analysis."
       }
     },
     "android": {
@@ -22,12 +21,10 @@
       },
       "permissions": [
         "CAMERA",
-        "RECORD_AUDIO",
-        "MODIFY_AUDIO_SETTINGS",
         "INTERNET",
         "ACCESS_NETWORK_STATE"
       ],
-      "package": "com.anonymous.copilotmobile"
+      "package": "com.zenith.copilotmobile"
     },
     "plugins": [
       "expo-router",

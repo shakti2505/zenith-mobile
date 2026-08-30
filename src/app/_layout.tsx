@@ -1,42 +1,56 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { View } from 'react-native';
 import '../global.css';
 
 export default function RootLayout() {
   return (
-    <View style={{ flex: 1, backgroundColor: '#0F172A' }}>
+    <>
       <StatusBar style="light" />
       <Stack
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#0F172A',
+            backgroundColor: '#09090B',
           },
-          headerTintColor: '#F8FAFC',
+          headerTintColor: '#FFFFFF',
           headerTitleStyle: {
-            fontWeight: '700',
+            fontWeight: '800',
           },
           contentStyle: {
-            backgroundColor: '#0F172A',
+            backgroundColor: '#09090B',
           },
+          headerShown: false,
         }}
       >
         <Stack.Screen
           name="index"
           options={{
-            title: 'Active Work Orders',
-            headerLargeTitle: true,
+            title: 'Work Orders',
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="work-order-details"
+          options={{
+            title: 'Work Order Details',
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="upload-sop"
+          options={{
+            title: 'Generate Dynamic SOP',
+            headerShown: false,
           }}
         />
         <Stack.Screen
           name="active-job"
           options={{
             title: 'Live Industrial Copilot',
-            headerShown: false, // Fullscreen camera view with floating UI
+            headerShown: false,
             presentation: 'fullScreenModal',
           }}
         />
       </Stack>
-    </View>
+    </>
   );
 }
